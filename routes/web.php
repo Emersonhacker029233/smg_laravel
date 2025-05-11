@@ -12,15 +12,6 @@ use App\Http\Controllers\ParentsController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\AttendanceController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application.
-|
-*/
-
 Route::get('/', function () {
     return redirect('/login');
 });
@@ -37,7 +28,7 @@ Route::post('/profile/changepassword', [HomeController::class, 'changePassword']
 
 // Admin Routes
 Route::middleware(['auth', 'role:Admin'])->group(function () {
-    
+
     // Role & Permission Management
     Route::get('/roles-permissions', [RolePermissionController::class, 'roles'])->name('roles-permissions');
     Route::get('/role-create', [RolePermissionController::class, 'createRole'])->name('role.create');
