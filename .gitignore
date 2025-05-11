@@ -7,7 +7,7 @@
 node_modules/
 dist/
 vendor/
-/config/app.php
+# /config/app.php
 
 # Compiled Java class files
 *.class
